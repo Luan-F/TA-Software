@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Keys</title>
+		<style>
+			body{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background-color: whitesmoke;
+			}
+			div{
+				margin: 5px;
+				border-radius: 10px;
+			}
+
+			button{
+				border-radius: 0px;
+			}
+			input{
+				border-radius: 0px;
+			}
+			div.main {
+				background-color: rgb(219, 218, 213);
+				justify-content: center;
+				align-items: center;
+			}
+			#inputs{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<div id="list"></div>
+			<div id="inputs">
+				<button onclick="addKey()">+</button><input type="text" placeholder="Novo botão" id="newKey">
+			</div>
+			<div id="inputs">
+				
+				<button onclick="createConfigFile()">Config</button>
+				<a href="./app.html"><button>Mapa</button></a>
+			</div>
+		</div>
+		<script src="./index.js"></script>
+	</body>
+</html>
