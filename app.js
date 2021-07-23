@@ -7,7 +7,7 @@ let last = document.getElementById('last');
 last.innerHTML = lastSelected;
 
 for(let key in keysConfig){
-	if(key === 'lastCommand'){
+	if(key === 'lastSelected'){
 		continue;
 	}
 	main.innerHTML += `<div id=${key} class="card">${key}</div>`;
@@ -20,7 +20,7 @@ const update = (key, color) => {
 fs.watch(key_path, (curr, event) => {
 	let { keysConfig, lastSelected } = JSON.parse(fs.readFileSync(key_path).toString());
 	for(let keyName in keysConfig){
-		if(keyName === 'lastCommand'){
+		if(keyName === 'lastSelected'){
 			continue;
 		}
 		let color = '';
@@ -35,7 +35,7 @@ fs.watch(key_path, (curr, event) => {
 		last.innerHTML = lastSelected;
 	}
 
-	if(keysConfig['lastCommand']){
+	if(keysConfig['lastSelected']){
 		update('last', 'red');
 	}
 	else{
