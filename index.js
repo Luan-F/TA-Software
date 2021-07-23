@@ -60,7 +60,7 @@ function createConfigFile(){
 		config += `"${itens[i]}": [${values[i][0]},${values[i][1]}]`;
 		keys += `"${itens[i]}": false`;
 	}
-	keys += '"lastSelected": false},"lastSelected": ""}';
+	keys += ',"lastSelected": false},"lastSelected": ""}';
 	config += '}';
 	
 	fs.writeFile("config.json", config, (err) => {
